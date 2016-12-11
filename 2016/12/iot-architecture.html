@@ -27,7 +27,12 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a class="icon fa-home" href="https://zhanghao0.github.io/blog/index.html"><span>Home</span></a></li>
+									<li>
+										<a class="icon fa-home" href="https://zhanghao0.github.io/blog/index.html"><span>Home</span></a>
+									</li>
+
+									<li id="toc1">
+									</li>
 								</ul>
 							</nav>
 
@@ -70,9 +75,7 @@
 							<div id="sidebar" class="4u 12u(mobile)">
 
 								<!-- Excerpts -->
-									<div id="toc">
-									</div>
-
+								<div id="toc"></div>
 							</div>
 						</div>
 					</div>
@@ -87,14 +90,14 @@
 			<script src="../../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../../assets/js/toc.min.js"></script>
-			<script src="../../assets/js/main.js"></script>
 			<script>
 				$(document).ready(function() {
-					$('#toc').toc({
+					var toc_id = $(window).width() >= 737 ? '#toc' : '#toc1';
+					$(toc_id).toc({
 				    'selectors': 'h1,h2,h3', //elements to use as headings
 				    'container': 'body', //element to find all selectors in
 				    'smoothScrolling': true, //enable or disable smooth scrolling on click
-				    'prefix': 'toc', //prefix for anchor tags and class names
+				    'prefix': 'dropotron', //prefix for anchor tags and class names
 				    'onHighlight': function(el) {}, //called when a new section is highlighted 
 				    'highlightOnScroll': true, //add class to heading that is currently in focus
 				    'highlightOffset': 100, //offset to trigger the next headline
@@ -108,8 +111,12 @@
 						  return prefix + "-" + $heading[0].tagName.toLowerCase();
 						}
 					});
+
+					if ($(window).width() < 737)
+						$('#toc').prepend('<a href="#" class="icon fa-bar-chart-o"><span>TOC</span></a>');
 				});
 			</script>
+			<script src="../../assets/js/main.js"></script>
 	</body>
 </html>
 
