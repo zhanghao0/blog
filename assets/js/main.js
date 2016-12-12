@@ -52,7 +52,7 @@
 				mode: 'fade',
 				noOpenerFade: true,
 				hoverDelay: 150,
-				hideDelay: 350
+				hideDelay: 350,
 			});
 
 		// Off-Canvas Navigation.

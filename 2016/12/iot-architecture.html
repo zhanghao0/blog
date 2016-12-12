@@ -31,7 +31,9 @@
 										<a class="icon fa-home" href="https://zhanghao0.github.io/blog/index.html"><span>Home</span></a>
 									</li>
 
-									<li id="toc1">
+									<li id="toc2">
+										<ul id="toc1">
+										</ul>
 									</li>
 								</ul>
 							</nav>
@@ -93,8 +95,16 @@
 			<script>
 				$(document).ready(function() {
 					var toc_id = $(window).width() >= 737 ? '#toc' : '#toc1';
+
+					if ($(window).width() < 737) {
+						$('#toc2').prepend('<a class="icon fa-home" href="#"><span>TOC</span></a>');
+					}
+					else {
+						//$('#toc').prepend('<span>TOC</span>');
+					}
+					
 					$(toc_id).toc({
-				    'selectors': 'h1,h2,h3', //elements to use as headings
+				    'selectors': 'h2,h3', //elements to use as headings
 				    'container': 'body', //element to find all selectors in
 				    'smoothScrolling': true, //enable or disable smooth scrolling on click
 				    'prefix': 'dropotron', //prefix for anchor tags and class names
@@ -111,9 +121,6 @@
 						  return prefix + "-" + $heading[0].tagName.toLowerCase();
 						}
 					});
-
-					if ($(window).width() < 737)
-						$('#toc').prepend('<a href="#" class="icon fa-bar-chart-o"><span>TOC</span></a>');
 				});
 			</script>
 			<script src="../../assets/js/main.js"></script>
