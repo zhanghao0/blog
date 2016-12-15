@@ -60,26 +60,70 @@
 								</div>								
 								<div>
 									<h3>Features</h3>
-									<ul>
-										<li><strong>Distributed</strong>: Unlike centralized NMS, which has one big backend application, the IoT platform uses multiple agents to collect data from various data sources. Load balancer may be utilized to distribute loads of the agents.</li>
-										<li><strong>Self-Manageable</strong>: The IoT platform consists of the Management Platform and the Admin Platform. The former monitors and controls a broad range of devices, sensors and applications, while the later monitors and controls the Management Platform.</li>
+									<ul class="default">
+										<li><strong>Distributed</strong><br/>Unlike centralized NMS, which has one big backend application, the IoT platform uses multiple agents to collect data from various data sources. Load balancer may be utilized to distribute loads of the agents.</li>
+										<li><strong>Self-Manageable</strong><br/>The IoT platform consists of the Management Platform and the Admin Platform. The former monitors and controls a broad range of devices, sensors and applications, while the later monitors and controls the Management Platform.</li>
 									</ul>
 									<p></p>
 								</div>
 								<div>
 									<h3>Functions</h3>
-									<p>Previsouly I worked on a couple of network management systems (<strong><a href="https://en.wikipedia.org/wiki/Network_monitoring">NMS</a></strong>) so I am quite familiar with the functions a typical NMS has: fault management, configuration management, accounting management, performance management and security management, or <strong><a href="https://en.wikipedia.org/wiki/FCAPS">FCAPS</a></strong>.</p>
+									<p>The functions of a typical Network Management System (<strong><a href="https://en.wikipedia.org/wiki/Network_monitoring">NMS</a></strong>) have five parts: fault management, configuration management, accounting management, performance management and security management, or <strong><a href="https://en.wikipedia.org/wiki/FCAPS">FCAPS</a></strong>.</p>
 									<a href="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" alt="Functions"/></a>
 									<p></p>
 								</div>
 								<div>
 									<h3>Data Processing Flow</h3>
 									<a href="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" alt="Data Processing Flow"/></a>
-									<p></p>
+									<p>
+										<ul class="default">
+											<li><strong>Data Source</strong><br/>An IoT platform deals with data from multiple sources:
+												<ul class="square">
+													<li>Things: sensors, devices, applications, services, etc.</li>
+													<li>Users: administrators, operators, tenants, etc.</li>
+													<li>APIs: event, alarm, asset, oAuth, etc.</li>
+												</ul>
+											</li>
+											<li><strong>Data Collection &amp; Access</strong><br/>An IoT platform collects data and allows access to the data using diverse protocols and data formats:
+												<ul class="square">
+													<li>Protocols: REST, SNMP, XMPP, MQTT, LoRa, etc.</li>
+													<li>Data Formats: XML, JSON, CSV, Binary, etc.</li>
+												</ul>
+											</li>
+											<li><strong>Data Transformation</strong><br/>Once data are collected, they will be transformed before storing into the database. Many transformation steps may be performed, such as validation, filtering, conversion and enrichment.
+											</li>
+											<li><strong>Data Storage</strong><br/>??
+											</li>
+											<li><strong>Data Analytics</strong><br/>??
+											</li>
+											<li><strong>Data Insights</strong><br/>??
+											</li>
+										</ul>
+									</p>
 								</div>
 								<div>
 									<h3>Core Concepts</h3>
 									<a href="https://zhanghao0.github.io/blog/2016/12/iot-core-concepts.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-core-concepts.gif" alt="Core Concepts"/></a>
+									<p></p>
+								</div>
+								<div>
+									<h3>Non-Functional Considerations</h3>
+									<ul class="default">
+										<li><strong>Availability</strong><br/>??</li>
+										<li><strong>Scalability</strong><br/>??</li>
+										<li><strong>Security</strong><br/>??</li>
+										<li><strong>Performance</strong><br/>??</li>
+										<li><strong>User Experience</strong><br/>??</li>
+									</ul>
+									<p></p>
+								</div>
+								<div>
+									<h3>Technology Selection</h3>
+									<ul class="default">
+										<li><strong>Data Storage &amp; Search</strong><br/>??</li>
+										<li><strong>Data Collection &amp; Access</strong><br/>??</li>
+										<li><strong>Message Queue</strong><br/>??</li>
+									</ul>
 									<p></p>
 								</div>
 								<div><p>to be updated</p></div>
