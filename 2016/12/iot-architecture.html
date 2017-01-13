@@ -49,73 +49,79 @@
 							<p class="date">December 4, 2016</p>
 						</header>
 						<div class="row">
-							<div id="content" class="8u 12u(mobile)">
-								<div>
-									<h3>History</h3>
-									<ul class="default">
-										<li><strong>Data Center Management System</strong><br/></li>
-										<li><strong>Smart Streetlighting System</strong><br/></li>
-									</ul>
-									<p></p>
-								</div>
-								<div>
-									<span>Recently I am responsible for designing an IoT platform for managing various sensors, devices and applications.</span>
-								</div>
-								<div>
+							<div id="content" class="8u 12u(mobile)">								<div>
 									<h3>Architecture</h3>
-									<ol class="default">
-										<li><strong>Multi-agents</strong><br/>
-										<a href="https://zhanghao0.github.io/blog/2016/12/iot-component-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-component-view.gif" alt="Multiple Agents"/></a></li>
-										<li><strong>Micro-services</strong><br/></li>
-									</ol>									
-									<p></p>										
-								</div>
-								<div>
-									<h3>Features</h3>
+									<p>Recently I am responsible for designing an IoT platform for managing various sensors, devices and applications.</p>
+									<a href="https://zhanghao0.github.io/blog/2016/12/iot-component-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-component-view.gif" alt="Architecture"/></a>	
+									<div>The IoT platform consists of four components:</div>
 									<ul class="default">
-										<li><strong>Distributed</strong><br/>Unlike centralized NMS, which has one big backend application, the IoT platform uses multiple agents to collect data from various data sources. Load balancer may be utilized to distribute loads of the agents.</li>
-										<li><strong>Self-Manageable</strong><br/>The IoT platform consists of a Management Platform and an Admin Platform. The former monitors and controls a broad range of devices, sensors and applications, while the later monitors and controls the Management Platform.</li>
+										<li><strong>South bound interface</strong><br/>Communicates with devices for data collection and device control.</li>
+										<li><strong>North bound interface</strong><br/>Communicates with external applications for data access.</li>
+										<li><strong>Graphic user interface</strong><br/>User-friendly web and mobile UI.</li>
+										<li><strong>Core</strong><br/>Provides business logic.</li>
 									</ul>
 									<p></p>
 								</div>
 								<div>
 									<h3>Functions</h3>
-									<p>The functions of a typical Network Management System (<strong><a href="https://en.wikipedia.org/wiki/Network_monitoring">NMS</a></strong>) have five parts: fault management, configuration management, accounting management, performance management and security management, or <strong><a href="https://en.wikipedia.org/wiki/FCAPS">FCAPS</a></strong>.</p>
-									<a href="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" alt="Functions"/></a>
+									<a href="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-functional-view.gif" alt="Functions (Categorical View)"/></a>
+									<h4>Categorical View</h4>
+									<div>The IoT platform provides core functions belonging to the following categories:</div>
+									<ul class="default">
+										<li><strong>Fault management</strong></li>
+										<li><strong>Configuration management</strong></li>
+										<li><strong>Accounting management</strong></li>
+										<li><strong>Performance management</strong></li>
+										<li><strong>Security management</strong></li>
+									</ul>
+									<div>Moreover, there are supporting functions which perform common tasks, including:</div>
+									<ul class="default">
+										<li><strong>Communication</strong></li>
+										<li><strong>Analytics</strong></li>
+										<li><strong>Visualization</strong></li>
+										<li><strong>Notification</strong></li>
+										<li><strong>Search Engine</strong></li>
+										<li><strong>Rule Engine</strong></li>
+										<li><strong>Workflow Engine</strong></li>
+										<li><strong>Others</strong></li>
+									</ul>
+									<div>Unlike traditional NMSs, the IoT platform treats things, users and APIs equally.</div>
+									<div>For example, traditional NMSs generate an alarm if a device goes down, but seldom generate alarms if a user failed to login or an API call execution time takes too long.</div>
+									<div>More examples:</div>
+									<a href="https://zhanghao0.github.io/blog/2016/12/iot-function-example.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-function-example.gif" alt="Functions (Categorical View)"/></a>
 									<p></p>
-								</div>
-								<div>
-									<h3>Data Processing Flow</h3>
-									<a href="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" alt="Data Processing Flow"/></a>
+									<h4>Data Flow View</h4>
+									<div>The IoT platform is a data driven platform. In the platform, data is collected, validated, filtered, transformed, stored, analyzed, visualized and controlled.</div>
+									<a href="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" alt="Functions (Data Flow View)"/></a>
 									<p>
 										<ul class="default">
-											<li><strong>Data Source</strong><br/>An IoT platform deals with data from multiple sources:
+											<li><strong>Data Source</strong><br/>The IoT platform deals with data from multiple sources:
 												<ul class="square">
 													<li>Things: sensors, devices, applications, services, etc.</li>
 													<li>Users: administrators, operators, tenants, etc.</li>
-													<li>APIs: event, alarm, asset, oAuth, etc.</li>
+													<li>APIs: event, alarm, asset, authentication, etc.</li>
 												</ul>
 											</li>
-											<li><strong>Data Collection &amp; Access</strong><br/>An IoT platform collects data and allows access to the data using diverse protocols and data formats:
+											<li><strong>Data Collection &amp; Access</strong><br/>Data is collected and exchanged using diverse protocols and data formats:
 												<ul class="square">
-													<li>Protocols: REST, SNMP, XMPP, MQTT, LoRa, etc.</li>
+													<li>Protocols: REST, SNMP, XMPP, MQTT, LoRa, WMI, JMX, etc.</li>
 													<li>Data Formats: XML, JSON, CSV, Binary, etc.</li>
 												</ul>
 											</li>
 											<li><strong>Data Transformation</strong><br/>Once data are collected, they will be transformed before storing into the database. Many transformation steps may be performed, such as validation, filtering, conversion and enrichment.
 											</li>
-											<li><strong>Data Storage</strong><br/>??
+											<li><strong>Data Storage</strong><br/>Data can be stored either on premise or in cloud, in RDBMS or no SQL DB.
 											</li>
-											<li><strong>Data Analytics</strong><br/>??
+											<li><strong>Data Analytics</strong><br/>Event correlation, data mining, root cause analysis and predicative analysis are all examples of data analytics.
 											</li>
-											<li><strong>Data Insights</strong><br/>??
+											<li><strong>Data Insight</strong><br/>Gaining insights is the ultimate objective of the IoT platform. This includes alarm notifications, performance charts, usage reports, maps, etc.
+											</li>
+											<li><strong>Data Sink</strong><br/>Collected data can be presented in web applications, mobile applications or desktop applications, which are either internal or external applications
+											</li>
+											<li><strong>Data Control</strong><br/>Data must be controlled in order to make sure it conforms to relevant policies, rules and guidelines. This includes: security control, audit, transaction management, tracing, backup/restore, etc.
 											</li>
 										</ul>
 									</p>
-								</div>
-								<div>
-									<h3>Core Concepts</h3>
-									<a href="https://zhanghao0.github.io/blog/2016/12/iot-core-concepts.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-core-concepts.gif" alt="Core Concepts"/></a>
 									<p></p>
 								</div>
 								<div>
