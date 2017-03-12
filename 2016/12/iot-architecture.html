@@ -47,6 +47,7 @@
 						<header>
 							<h2>IoT Platform Architecture</h2>
 							<p class="date">December 4, 2016</p>
+							<p class="date">March 12, 2017</p>
 						</header>
 						<div class="row">
 							<div id="content" class="8u 12u(mobile)">
@@ -61,23 +62,32 @@
 												<li>Deal with various end devices – desktop PC, tablet, mobile phone, etc.</li>
 												<li>Interact with various users – administrator, network engineer, tenant, etc.</li>
 												<li>Manages not only things, but also people and APIs.<br/><a href="https://zhanghao0.github.io/blog/2016/12/iot-internet-of-objects.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-internet-of-objects.gif" alt="IoO"/></a>
-												<ul>People’s activities and API usage should be monitored and analyzed for
+												<br/>People’s activities and API usage should be monitored and analyzed for
+												<ol class="default">
 													<li>More effective use of the IoT platform</li>
 													<li>Performance improvement</li>
 													<li>Prevention and detection of fraudulent or dangerous activities</li>
-												</ul>
+												</ol>
 												</li>
 											</ul>
 										</li>
-										<li><strong>Smart</strong><br/>An IoT platform itself must be smart in order to support smart home, smart utilities, smart transportation, smart nation, etc.<br/>This includes:
+										<li><strong>Smart</strong><br/>An ordinary IoT platform could not catch up with the smart trend. An IoT platform itself must be smart in order to support smart initiatives - smart home, smart utilities, smart transportation, smart nation, to name a few.<br/>This includes:
 											<ul class="square">
-												<li>Self-manageable – manage the IoT platform itself, such as servers, load balancers, database, applications, middleware, etc.</li>
+												<li>Self-manageable – manage the IoT platform itself, such as servers, data stores, applications, middleware, etc.</li>
 												<li>Realtime analysis – quickly detect fault and performance issues; reduce unnecessary alarms (RCA); detect fraudulent and dangerous activities.</li>
-												<li>Predicative analysis</li>
+												<li>Predicative analysis - network capability planning; battery lifetime predication, etc.</li>
 											</ul>
 										</li>
 										<li><strong>Modular</strong></li>
-										<li><strong>Secure</strong><br/>Multi-tenancy</li>
+										<li><strong>Secure</strong><br/>This includes:
+											<ul class="square">
+												<li>Sensitive data encryption</li>
+												<li>End-to-end secure communication</li>
+												<li>User authentication and authorization</li>
+												<li>Multi-tenancy</li>
+												<li>Audit</li>
+											</ul>
+										</li>
 										<li><strong>Big Data Ready</strong><br/>Variety, Volume, Velocity</li>
 									</ul>
 									<p></p>
@@ -88,15 +98,15 @@
 									<a href="https://zhanghao0.github.io/blog/2016/12/iot-function-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-function-view.gif" alt="Function Architecture"/></a>	
 									<div>The IoT platform consists of four components:</div>
 									<ul class="default">
-										<li><strong>South bound interface</strong><br/>Communicates with devices for data collection and device control.</li>
-										<li><strong>North bound interface</strong><br/>Communicates with external applications for data access.</li>
-										<li><strong>Graphic user interface</strong><br/>User-friendly web and mobile UI.</li>
-										<li><strong>Core</strong><br/>Provides business logic.</li>
+										<li><strong>Domain</strong><br/>Provides business logic.</li>
+										<li><strong>API</strong><br/>Interacts with things, people, external applications and data stores.</li>
+										<li><strong>User Interface</strong><br/>User-friendly web UI, mobile UI, desktop UI or command line interfacd.</li>
+										<li><strong>Storage</strong><br/>The data stores such as RDBMS, No-SQL, Big data store and cloud storage.</li>
 									</ul>
 									<p></p>
 
 									<h4>Data Architecture</h4>
-									<div>The IoT platform is a data driven platform. In the platform, data is collected, validated, filtered, transformed, stored, analyzed, visualized and controlled.</div>
+									<div>The IoT platform is a data driven platform. Within the platform, data is collected, validated, filtered, transformed, stored, analyzed, visualized and controlled.</div>
 									<a href="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-data-view.gif" alt="Functions (Data Flow View)"/></a>
 									<p>
 										<ul class="default">
@@ -123,31 +133,32 @@
 											</li>
 											<li><strong>Data Sink</strong><br/>Collected data can be presented in web applications, mobile applications or desktop applications, which are either internal or external applications
 											</li>
-											<li><strong>Data Control</strong><br/>Data must be controlled in order to make sure it conforms to relevant policies, rules and guidelines. This includes: security control, audit, transaction management, tracing, backup/restore, etc.
+											<li><strong>Data Control</strong><br/>Data must be controlled in order to make it conform to relevant policies, rules and guidelines. This includes: security control, audit, transaction management, tracing, backup/restore, etc.
 											</li>
 										</ul>
 									</p>
 								</div>
 								<div>
 									<h3>Functions</h3>
-									<a href="https://zhanghao0.github.io/blog/2016/12/iot-function-view.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-function-view.gif" alt="Functional View"/></a>
+									<a href="https://zhanghao0.github.io/blog/2016/12/iot-functions.gif" class="image"><img src="https://zhanghao0.github.io/blog/2016/12/iot-functions.gif" alt="Functions"/></a>
 									<div>The IoT platform provides core functions belonging to the following categories:</div>
 									<ul class="default">
-										<li><strong>Fault management</strong></li>
-										<li><strong>Configuration management</strong></li>
-										<li><strong>Accounting management</strong></li>
-										<li><strong>Performance management</strong></li>
-										<li><strong>Security management</strong></li>
+										<li><strong>Control</strong></li>
+										<li><strong>Monitoring</strong></li>
+										<li><strong>Billing</strong></li>
 									</ul>
 									<div>Moreover, there are supporting functions which perform common tasks, including:</div>
 									<ul class="default">
-										<li><strong>Communication</strong></li>
-										<li><strong>Analytics</strong></li>
+										<li><strong>Incident Management</strong></li>
+										<li><strong>Analytics Engine</strong></li>
 										<li><strong>Visualization</strong></li>
 										<li><strong>Notification</strong></li>
+										<li><strong>Communication</strong></li>
+										<li><strong>Security</strong></li>
 										<li><strong>Search Engine</strong></li>
-										<li><strong>Rule Engine</strong></li>
+										<li><strong>Rules Engine</strong></li>
 										<li><strong>Workflow Engine</strong></li>
+										<li><strong>User Experience</strong></li>
 										<li><strong>Others</strong></li>
 									</ul>
 									<div>Unlike traditional NMSs, the IoT platform treats things, users and APIs equally.</div>
